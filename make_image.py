@@ -1,16 +1,18 @@
 from PIL import Image
 
 def main():
-    l0 = Image.open('images/H0.png')
-    l1 = Image.open('images/H1.png')
-    l2 = Image.open('images/H2.png')
-    l3 = Image.open('images/H3.png')
-    l4 = Image.open('images/H4.png')
-    l5 = Image.open('images/H5.png')
-    l6 = Image.open('images/H6.png')
-    l7 = Image.open('images/H7.png')
-    l8 = Image.open('images/H8.png')
-    l9 = Image.open('images/H9.png')
+    l0 = Image.open('assets/H0.png')
+    l1 = Image.open('assets/H1.png')
+    l2 = Image.open('assets/H2.png')
+    l3 = Image.open('assets/H3.png')
+    l4 = Image.open('assets/H4.png')
+    l5 = Image.open('assets/H5.png')
+    l6 = Image.open('assets/H6.png')
+    l7 = Image.open('assets/H7.png')
+    l8 = Image.open('assets/H8.png')
+    l9 = Image.open('assets/H9.png')
+    # Assigns different opacities with the bottom layer having full opacity
+    # and dropping the opacity down by 10% with each successive layer
     l1.putalpha(230)
     l2.putalpha(205)
     l3.putalpha(180)
@@ -21,6 +23,7 @@ def main():
     l8.putalpha(55)
     l9.putalpha(30)
     
+    # Combine the layers into one image and save for the final result
     l0.paste(l1, (0,0), l1)
     l0.paste(l2, (0,0), l2)
     l0.paste(l3, (0,0), l3)

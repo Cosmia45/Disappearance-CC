@@ -41,6 +41,6 @@ def vid_capture(frame, count):
 
     cap.set(1, frame)
     ret, frame = cap.read()
-    cv2.imwrite("images/H{num}.png".format(num = count), frame)
+    cv2.imwrite("assets/H{num}.png".format(num = count), frame)
 
 main()

@@ -30,5 +30,5 @@ def main():
     l0.paste(l7, (0,0), l7)
     l0.paste(l8, (0,0), l8)
     l0.paste(l9, (0,0), l9)
-    l0.save("images/sample.png")
+    l0.save("examples/sample.png")
 main()

@@ -7,6 +7,7 @@ def main():
     weights = [4/62,27/62,26/62,5/62]
     shot_part = random.choices(haruhi_parts,weights)[0]
     for i in range(10):
+        # Randomly select a frame included in the current state, and then determines the next state
         if (shot_part == 1):
             frame = random.randint(0,25800)
             shot_part = next_shot(1)
@@ -21,6 +22,8 @@ def main():
             shot_part = next_shot(4)
         vid_capture(frame,i)
 
+# This function uses a Markov Chain probability to determine which part of the film to take the
+# next shot from. 
 def next_shot(shot_part):
     haruhi_parts = [1,2,3,4]
     if (shot_part == 1):
@@ -33,6 +36,7 @@ def next_shot(shot_part):
         weights = [0,0.4,0.6,0]
     return random.choices(haruhi_parts,weights)[0]
 
+# Captures the specified frame and saves it as an image in the appropriate location
 def vid_capture(frame, count):
     cap = cv2.VideoCapture('Suzumiya Haruhi no Shoushitsu (not burned).m4v')
     if (cap.isOpened()== False):

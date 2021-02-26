@@ -8,10 +8,18 @@ The Markov Chain used in this program is based on how I edited my audiovisual es
 
 Essentially, I divided the story's narrative into four different parts, and analyzed which parts of the movies I took clips from. I looked at every clip from the movie I used in my AV essay (ignoring clips from media besides the movie) and determined which part of the movie they came from and the sequence of which I used them for the AV Essay. I then used that sequence to model a Markov Chain to then randomly select 10 frames from the movie. These 10 frames are then stacked together, creating the rather strange final results you can see in the example folder. 
 
-For the record I divided the parts of the movie as follows:
+For the record I divided the parts of the movie as follows:  
 **Pre-Disappearance:** Frames 0-25800  
 **The Disappearance:** Frames 25801-100700  
-**Finding Haruhi and the Climax:** 100701-196280  
-**After Story:** 196281-232752  
+**Finding Haruhi and the Climax:** Frames 100701-196280  
+**After Story:** Frames 196281-232752  
 
+And the Markov Chain probabilities are as follows:  
+
+|        | Part 1 | Part 2 | Part 3 | Part 4 |
+|--------|--------|--------|--------|--------|
+| Part 1 | 0      | 3/4    | 1/4    | 0      |
+| Part 2 | 3/26   | 14/26  | 8/26   | 1/26   |
+| Part 3 | 1/25   | 7/25   | 13/25  | 4/25   |
+| Part 4 | 0      | 2/5    | 3/5    | 0      |
 
